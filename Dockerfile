@@ -2,7 +2,7 @@ FROM centos:7
 
 # Install httpd
 RUN yum -y --setopt=tsflags=nodocs update && \
-    yum -y --setopt=tsflags=nodocs install httpd openssh-server && \
+    yum -y --setopt=tsflags=nodocs install less vim-minimal httpd openssh-server && \
     yum clean all
 EXPOSE 2222 80
 
