@@ -1,5 +1,7 @@
 #!/bin/bash
 
-service ssh start
+/usr/sbin/sshd -D &
 rm -rf /run/httpd/* /tmp/httpd*
-exec /usr/sbin/apachectl -DFOREGROUND
+/usr/sbin/httpd -DFOREGROUND
+
+exit 0
