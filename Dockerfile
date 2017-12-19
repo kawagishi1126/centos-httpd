@@ -17,3 +17,4 @@ RUN ssh-keygen -t rsa -N "" -f /etc/ssh/ssh_host_rsa_key
 ENV SSH_PASSWD "root:Docker!"
 RUN echo "$SSH_PASSWD" | chpasswd
 RUN chmod -v +x /usr/local/bin/run-webapponlinux-httpd.sh
+CMD ["/usr/local/bin/run-webapponlinux-httpd.sh"]
